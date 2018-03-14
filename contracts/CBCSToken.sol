@@ -144,6 +144,7 @@ contract CBCSToken is ERC721 {
         }
         removeToken(msg.sender, _tokenId);
         Transfer(msg.sender, 0x0, _tokenId);
+        TokenBurnt(_tokenId);
     }
 
     /**
